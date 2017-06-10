@@ -54,7 +54,7 @@ namespace BlobProject.Controllers
                 if (item.GetType() == typeof(CloudBlockBlob))
                 {
                     CloudBlockBlob blob = (CloudBlockBlob)item;
-                    blobs.Add(blob.Name);
+                    blobs.Add(blob.Uri.AbsoluteUri);
                 }
                 else if (item.GetType() == typeof(CloudPageBlob))
                 {
