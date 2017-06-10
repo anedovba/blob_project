@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="fisrtwebapp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\ШАГ\\Project\\azure\\blob\\BlobProject\\BlobProject\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\ШАГ\\Project\\azure\\blob\\BlobProject\\BlobProject\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-BlobProject-20170602115745.mdf;Initial Catalog=aspnet-BlobProject-20170602115745;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\ШАГ\\Project\\azure\\blob\\BlobProject\\BlobProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

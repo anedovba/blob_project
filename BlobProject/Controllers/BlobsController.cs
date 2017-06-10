@@ -84,5 +84,17 @@ namespace BlobProject.Controllers
             }
             return new EmptyResult();
         }
+
+        public EmptyResult DeleteBlob()
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
+   CloudConfigurationManager.GetSetting("nedovba_AzureStorageConnectionString"));
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClient.GetContainerReference("test-blob-container");
+            CloudBlockBlob blob = container.GetBlockBlobReference("carrot");
+            blob.Delete();
+
+            return new EmptyResult();
+        }
     }
 }
