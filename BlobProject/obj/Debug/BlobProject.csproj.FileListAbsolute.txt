@@ -147,6 +147,5 @@ D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\bin\ru\Microsoft.Owin.Secur
 D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\obj\Debug\BlobProject.csprojResolveAssemblyReference.cache
 D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\obj\Debug\BlobProject.dll
 D:\ШАГ\Project\azure\blob\BlobProject\BlobProject\obj\Debug\BlobProject.pdb

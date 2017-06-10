@@ -77,8 +77,8 @@ namespace BlobProject.Controllers
    CloudConfigurationManager.GetSetting("nedovba_AzureStorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("test-blob-container");
-            CloudBlockBlob blob = container.GetBlockBlobReference("test_image");
-            using (var fileStream = System.IO.File.OpenWrite(@"C:\Users\ANNA\Pictures\red_shoes.jpg"))
+            CloudBlockBlob blob = container.GetBlockBlobReference("carrot");
+            using (var fileStream = System.IO.File.OpenWrite(@"C:\Users\ANNA\Pictures\carrot_new.jpg"))
             {
                 blob.DownloadToStream(fileStream);
             }
