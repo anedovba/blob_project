@@ -34,8 +34,8 @@ namespace BlobProject.Controllers
     CloudConfigurationManager.GetSetting("nedovba_AzureStorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("test-blob-container");
-            CloudBlockBlob blob = container.GetBlockBlobReference("carrot");
-            using (var fileStream = System.IO.File.OpenRead(@"C:\Users\ANNA\Pictures\Carrot.jpg"))
+            CloudBlockBlob blob = container.GetBlockBlobReference("tomato");
+            using (var fileStream = System.IO.File.OpenRead(@"C:\Users\ANNA\Pictures\tomato_PNG12530.png"))
             {
                 blob.UploadFromStream(fileStream);
             }
@@ -47,27 +47,25 @@ namespace BlobProject.Controllers
                CloudConfigurationManager.GetSetting("nedovba_AzureStorageConnectionString"));
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             CloudBlobContainer container = blobClient.GetContainerReference("test-blob-container");
-            List<string> blobs = new List<string>();
+           
+            List<Dictionary<string, string>> blobs = new List<Dictionary<string, string>>();
+
 
             foreach (IListBlobItem item in container.ListBlobs(null, false))
             {
                 if (item.GetType() == typeof(CloudBlockBlob))
                 {
-                    CloudBlockBlob blob = (CloudBlockBlob)item;
-                    blobs.Add(blob.Uri.AbsoluteUri);
+                    CloudBlockBlob bl = (CloudBlockBlob)item;
+                    Dictionary<string, string> blob = new Dictionary<string, string>();
+                    blob.Add("Uri", bl .Uri.AbsoluteUri);
+                    blob.Add("Name", bl.Name);
+                    blobs.Add(blob);
+                
                 }
-                else if (item.GetType() == typeof(CloudPageBlob))
-                {
-                    CloudPageBlob blob = (CloudPageBlob)item;
-                    blobs.Add(blob.Name);
-                }
-                else if (item.GetType() == typeof(CloudBlobDirectory))
-                {
-                    CloudBlobDirectory dir = (CloudBlobDirectory)item;
-                    blobs.Add(dir.Uri.ToString());
-                }
+                
             }
-
+            ViewBag.blobs = blobs;
+           
             return View(blobs);
            
         }
