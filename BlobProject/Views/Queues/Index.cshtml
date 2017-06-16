@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Создание сообщений в очередь</h2>
+
+    @using (Html.BeginForm("Index", "Queues", FormMethod.Post))
+    {
+        <label>Введите сообщение:</label>
+        @Html.TextBox("mes")
+
+        <input type="submit" />
+    }
+

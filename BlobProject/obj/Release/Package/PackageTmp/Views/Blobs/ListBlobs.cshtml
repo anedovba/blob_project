@@ -1,13 +1,18 @@
-﻿@model List<string>
+﻿@model List<Dictionary<string, string>>
 @{
     ViewBag.Title = "List blobs";
+
 }
 
 <h2>List blobs</h2>
+<h3>Choose to download picture</h3>
 
 <ul>
+    
     @foreach (var item in Model)
     {
-        <li>@item</li>
+     
+        <li><a href="@item["Uri"]">@item["Name"] </a></li>
+      
     }
 </ul>

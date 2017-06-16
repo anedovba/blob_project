@@ -228,6 +228,7 @@
     <Compile Include="Controllers\BlobsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\QueuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -302,6 +303,7 @@
     <Content Include="Views\Blobs\UploadBlob.cshtml" />
     <Content Include="Views\Blobs\ListBlobs.cshtml" />
     <Content Include="Views\Blobs\DownloadBlob.cshtml" />
+    <Content Include="Views\Queues\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
